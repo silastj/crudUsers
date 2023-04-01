@@ -4,15 +4,15 @@
 - npm install sequelize-cli -D
 - npm install sequelize 
 - npm install nodemon -D
-- npm install pg pg-hstore
+- npm install pg pg-hstore ou npm install mysql2
 - npm install -g sequelize-cli
 - npx sequelize db:create
 - npx sequelize migration:create --name=create-user
 
 ## Rodar o Projeto
-- Clone o repositorio 
+- Clone o repositorio  `https://github.com/silastj/crudUsers.git`
 - Node v15.0.0
-- nom run dev
+- npm run dev
 
 
 ## DB

@@ -2,6 +2,9 @@ const UserModel = require("../models/User")
 
 module.exports = {
 
+  async getHome(req, res){
+    res.status(200).json({message: `Hello baby`})
+  },
   // CREATE USER
   async createUser(req,res) {
     try {

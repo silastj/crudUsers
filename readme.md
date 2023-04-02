@@ -8,6 +8,7 @@
 - npm install -g sequelize-cli
 - npx sequelize db:create
 - npx sequelize migration:create --name=create-user
+- npx sequelize-cli init // podemos usar como template
 
 ## Rodar o Projeto
 - Clone o repositorio  `https://github.com/silastj/crudUsers.git`

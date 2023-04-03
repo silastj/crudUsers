@@ -4,7 +4,6 @@
 - npm install sequelize-cli -D
 - npm install sequelize 
 - npm install nodemon -D
-- npm install pg pg-hstore ou npm install mysql2
 - npm install -g sequelize-cli
 - npx sequelize db:create
 - npx sequelize migration:create --name=create-user
@@ -13,49 +12,37 @@
 ## Rodar o Projeto
 - Clone o repositorio  `https://github.com/silastj/crudUsers.git`
 - Node v15.0.0
+- npm install
 - npm run dev
 
 
-## DB
-- server host localhost
-- database crudnode
-- port 3306 5432
-- username root  admin
-- password 1234  
+## CRUD USER
 
-- tabela users
+- Get Users GET
+-- http://localhost:3030/list ou 
+-- https://userscrud.up.railway.app/list
 
+- Delete User  DELETE
+-- passar o numero do id exemplo: 4
+-- http://localhost:3030/user-delete/4 ou
+-- https://userscrud.up.railway.app/user-delete/4
 
+- Update User UPDATE
+-- passar as informações com json:
+`{"name": "velho",  "email": "velho@hotmail.com"}`
+-- passar o id:
+-- http://localhost:3030/user-update/1 ou 
+-- https://userscrud.up.railway.app/user-update/1
 
-## Pg Admin
--- altere dentro da pasta C:\Program Files\PostgreSQL\14\data pg_hba.conf
--- deixar tudo trust
--- exemplo:
+- Create User POST
+-- http://localhost:3030/user-create 
+-- https://userscrud.up.railway.app/user-create 
 
-# TYPE  DATABASE        USER            ADDRESS                 METHOD
-
-# "local" is for Unix domain socket connections only
-local   all             all                                     trust
-# IPv4 local connections:
-host    all             all             127.0.0.1/32            trust
-# IPv6 local connections:
-host    all             all             ::1/128                 trust
-# Allow replication connections from localhost, by a user with the
-# replication privilege.
-local   replication     all                                     trust
-host    replication     all             127.0.0.1/32            trust
-host    replication     all             ::1/128                 trust
+-- passar as informações com json(name, email):
+`{"name": "velho",  "email": "velho@hotmail.com"}`
 
 
--- HOST NAME/ADRESS
-postgres-asilas
-127.0.0.1
 
--- maintenance database
-postgres	
 
--- username
-postgres		
 
--- password
-1234
+

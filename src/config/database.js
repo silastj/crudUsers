@@ -1,12 +1,7 @@
-// module.exports = {
-//   dialect: "mysql",
-//   host: "containers-us-west-171.railway.app", 
-//   username: "root", 
-//   port: "6298", 
-//   password: "6eKEpZrsxmssXlqsgGvd", 
-//   database: "railway", 
-//   define: {
-//     timestamp: true,
-//     underscored:true
-//   }
-// }
+module.exports = {
+  dialect: "mysql",
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
+  host: process.env.DB_HOST
+}

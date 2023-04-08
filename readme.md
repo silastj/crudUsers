@@ -9,6 +9,8 @@
 - npx sequelize migration:create --name=create-user
 - npx sequelize-cli init // podemos usar como template
 
+- npm install jsonwebtoken
+
 ## Rodar o Projeto
 - Clone o repositorio  `https://github.com/silastj/crudUsers.git`
 - Node v15.0.0

@@ -43,6 +43,10 @@
 -- passar as informações com json(name, email):
 `{"name": "velho",  "email": "velho@hotmail.com"}`
 
+- Get Users GET - Pages
+-- http://localhost:3030/list?page=3 ou 
+-- https://userscrud.up.railway.app/list?page=3
+
 
 
 

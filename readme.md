@@ -5,8 +5,9 @@
 - npm install sequelize 
 - npm install nodemon -D
 - npm install -g sequelize-cli
-- npx sequelize db:create
-- npx sequelize migration:create --name=create-user
+- npx sequelize db:create // cria o banco de dados
+- npx sequelize migration:create --name=create-user // cria a migration para criar a tabela e coluna
+- npx sequelize db:migrate // cria a tabela com as colunas acima
 - npx sequelize-cli init // podemos usar como template
 
 - npm install jsonwebtoken
@@ -31,7 +32,7 @@
 
 - Update User UPDATE
 -- passar as informações com json:
-`{"name": "velho",  "email": "velho@hotmail.com"}`
+`{"name": "velho2",  "email": "velho@hotmail.com2"}`
 -- passar o id:
 -- http://localhost:3030/user-update/1 ou 
 -- https://userscrud.up.railway.app/user-update/1

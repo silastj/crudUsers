@@ -1,12 +1,20 @@
+// DEIXAR DINAMICO COM LOCAL OU PROCESS BANCO ONLINE
 module.exports = {
-  dialect: "mysql",
-  username: process.env.DB_USERNAME || "root",
-  password: process.env.DB_PASSWORD || "6eKEpZrsxmssXlqsgGvd",
-  database: process.env.DB_DBNAME || "railway",
-  host: process.env.DB_HOST || "containers-us-west-171.railway.app",
-  port:process.env.DB_PORT || "6298",
+  dialect: "postgres",
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
+  host: process.env.DB_HOST,
+  port:process.env.DB_PORT,
+  ssl: true,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  },
   define: {
-    timestamp: true,
-    underscored:true
-  }
+      timestamp: true,
+      underscored:true
+    }
 }

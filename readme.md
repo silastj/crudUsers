@@ -32,7 +32,7 @@
 
 - Update User UPDATE
 -- passar as informações com json:
-`{"name": "velho2",  "email": "velho@hotmail.com2"}`
+`{"name": "velho",  "email": "velho@hotmail.com"}`
 -- passar o id:
 -- http://localhost:3030/user-update/1 ou 
 -- https://userscrud.up.railway.app/user-update/1
@@ -48,8 +48,72 @@
 -- http://localhost:3030/list?page=3 ou 
 -- https://userscrud.up.railway.app/list?page=3
 
+## BANCO DE DADOS
 
+// NEON 
+// https://console.neon.tech/app/projects/old-paper-175028/tables
 
+module.exports = {  
+  dialect: "postgres",
+  host:'ep-jolly-bush-147065.us-east-2.aws.neon.tech',
+  database:'teste',
+  username:'silastj',
+  password:'GEigHBY8qs9r',
+  ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    },
+  define: {
+        timestamp: true,
+        underscored:true
+      }
+}
 
+// LOCAL POSTGRES PGADMIN
 
+module.exports = {
+  dialect: "postgres",
+  username: "postgres",
+  password: "1234",
+  database: "teste",
+  host: "localhost",
+  port: "5432",
+  define: {
+    timestamp: true,
+    underscored:true
+  }
+}
+
+// LOCAL DBEAVER MYSQL
+
+module.exports = {
+  dialect: "mysql",
+  username: "root",
+  password: "1234",
+  database: "teste",
+  host: "localhost",
+  port: "3306",
+  define: {
+    timestamp: true,
+    underscored:true
+  }
+}
+
+// DEIXAR DINAMICO COM LOCAL OU PROCESS BANCO ONLINE
+
+module.exports = {
+  dialect: "mysql",
+  username: process.env.DB_USERNAME || "root",
+  password: process.env.DB_PASSWORD || "6eKEpZrsxmssXlqsgGvd",
+  database: process.env.DB_DBNAME || "railway",
+  host: process.env.DB_HOST || "containers-us-west-171.railway.app",
+  port:process.env.DB_PORT || "6298",
+  define: {
+    timestamp: true,
+    underscored:true
+  }
+}
 

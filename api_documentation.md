@@ -32,8 +32,8 @@
 - **Exemplo:** `-- passar as informações com json(name, email):`          
 - **Requisição JSON:**
   {
-    "name": "velho",
-    "email": "velho@hotmail.com"
+    "name": "velho33",
+    "email": "velho33@hotmail.com"
   }
 
 ## 5. Update User (UPDATE com Autenticação - token)

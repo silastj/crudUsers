@@ -4,6 +4,9 @@
 - npm install sequelize-cli -D
 - npm install sequelize 
 - npm install nodemon -D
+- npm install pg pg-hstore
+- npm install bcryptjs
+- npm install jsonwebtoken
 - npm install -g sequelize-cli
 - npx sequelize db:create // cria o banco de dados
 - npx sequelize migration:create --name=create-user // cria a migration para criar a tabela e coluna

@@ -16,15 +16,23 @@
 ### 2.2 Ambiente de Produção
 - **Endpoint:** `https://list-users.cyclic.app/list`
 
-## 3. Get Users (GET) - Páginas com Autenticação (token)
+## 3. Get User (GET)
 
 ### 3.1 Localhost
-- **Endpoint:** `http://localhost:3030/list?page=3`
+- **Endpoint:** `http://localhost:3030/user/1`
 
 ### 3.2 Ambiente de Produção
+- **Endpoint:** `https://list-users.cyclic.app/user/1`
+
+## 4. Get Users (GET)
+
+### 4.1 Localhost
+- **Endpoint:** `http://localhost:3030/list?page=3`
+
+### 4.2 Ambiente de Produção
 - **Endpoint:** `https://list-users.cyclic.app/list?page=3`
 
-## 4. Create User (CREATE)
+## 5. Create User (CREATE)
 
 - **Endpoint:** 
   - Localhost: `http://localhost:3030/user-create`
@@ -33,21 +41,25 @@
 - **Requisição JSON:**
   {
     "name": "velho33",
-    "email": "velho33@hotmail.com"
+    "email": "velho33@hotmail.com",
+    "password: "1234"
   }
 
-## 5. Update User (UPDATE com Autenticação - token)
+## 6. Update User (UPDATE com Autenticação - token)
 
 - **Endpoint:** 
   - Localhost: `http://localhost:3030/user-update/{id}`
   - Produção: `https://list-users.cyclic.app/user-update/{id}`
 - **Exemplo:** `http://localhost:3030/user-update/1`
+  {
+    "name": "velho33",
+    "email": "velho33@hotmail.com",
+    "password: "1234"
+  }
 
-## 6. Delete User (DELETE com Autenticação - token)
+## 7. Delete User (DELETE com Autenticação - token)
 
 - **Endpoint:** 
   - Localhost: `http://localhost:3030/user-delete/{id}`
   - Produção: `https://list-users.cyclic.app/user-delete/{id}`
 - **Exemplo:** `http://localhost:3030/user-delete/4`
-
-

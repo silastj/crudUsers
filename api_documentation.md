@@ -52,9 +52,8 @@
   - Produção: `https://list-users.cyclic.app/user-update/{id}`
 - **Exemplo:** `http://localhost:3030/user-update/1`
   {
-    "name": "velho33",
-    "email": "velho33@hotmail.com",
-    "password: "1234"
+    "email": "bob@example.com",
+    "password": "1234"
   }
 
 ## 7. Delete User (DELETE com Autenticação - token)
@@ -63,3 +62,14 @@
   - Localhost: `http://localhost:3030/user-delete/{id}`
   - Produção: `https://list-users.cyclic.app/user-delete/{id}`
 - **Exemplo:** `http://localhost:3030/user-delete/4`
+
+## 8. Login User (POST)
+
+- **Endpoint:** 
+  - Localhost: `http://localhost:3030/login`
+  - Produção: `https://list-users.cyclic.applogin`
+- **Exemplo:** `http://localhost:3030/login`
+  {
+    "email": "bob@example.com",
+    "password": "1234"
+  }

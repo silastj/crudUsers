@@ -40,9 +40,9 @@
 - **Exemplo:** `-- passar as informações com json(name, email):`          
 - **Requisição JSON:**
   {
-    "name": "velho33",
-    "email": "velho33@hotmail.com",
-    "password: "1234"
+    "name": "amos",
+    "email": "amos@hotmail.com",
+    "password": "1234"
   }
 
 ## 6. Update User (UPDATE com Autenticação - token)
@@ -70,6 +70,6 @@
   - Produção: `https://list-users.cyclic.applogin`
 - **Exemplo:** `http://localhost:3030/login`
   {
-    "email": "bob@example.com",
+    "email": "amos@hotmail.com",
     "password": "1234"
   }

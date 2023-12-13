@@ -42,7 +42,7 @@
   {
     "name": "amos",
     "email": "amos@hotmail.com",
-    "password": "1234"
+    "password": "1234",
   }
 
 ## 6. Update User (UPDATE com Autenticação - token)
@@ -70,6 +70,6 @@
   - Produção: `https://list-users.cyclic.applogin`
 - **Exemplo:** `http://localhost:3030/login`
   {
-    "email": "amos@hotmail.com",
+    "email": "bob@example.com",
     "password": "1234"
   }

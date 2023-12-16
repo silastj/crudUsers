@@ -20,7 +20,7 @@ module.exports = {
       return res.status(401).send("Senha inválida");
     }
 
-    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY || SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY || SECRET, { expiresIn: "1d" });
 
     res.cookie("auth_token", token, { expires: new Date(Date.now() + 3600000) });
     res.status(200).send({
@@ -87,11 +87,11 @@ module.exports = {
       body.password = hashedPassword;
     }
 
-    if (Object.keys(body).length > 0) {
+    if (Object.keys(body).length > 0 && name !== undefined) {
       await UserModel.update(body, { where: { id } });
       res.status(200).json(`User with id: ${id}, do name: ${name} and email: ${email}. Successfully Updated !`);
     } else {
-      res.status(200).json({ message: "No changes were made to the user." });
+      res.status(200).json({ message: `No changes were made to the user, outher name = empty` });
     }
   },
 
@@ -104,7 +104,7 @@ module.exports = {
       const users = await UserModel.findAndCountAll({
         offset,
         limit: size,
-        attributes: ["id", "name", "email", "created_at", "updated_at"],
+        attributes: ["id", "name", "email", "created_at", "updated_at", "cpf", "phone_number", "rg", "address", "number", "neighborhood", "city", "cep"],
       })
       if (!users) {
         res.status(200).json({ message: `NoNoNo Users Errrouuuuuuuuuuuu` })
@@ -121,7 +121,7 @@ module.exports = {
       const { id } = req.params;
       const user = await UserModel.findOne({
         where: { id: Number(id) },
-        attributes: ["id", "name", "email", "created_at", "updated_at"]
+        attributes: ["id", "name", "email", "created_at", "updated_at", "cpf", "phone_number", "rg", "address", "number", "neighborhood", "city", "cep"],
       })
       if (!user) return res.json({ error: "No existed user registered." })
       return res.json(user)

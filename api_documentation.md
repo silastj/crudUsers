@@ -37,7 +37,7 @@
 - **Endpoint:** 
   - Localhost: `http://localhost:3030/user-create`
   - Produção: `https://list-users.cyclic.app/user-create`
-- **Exemplo:** `-- passar as informações com json(name, email):`          
+- **Exemplo:** -- passar as informações com json(name, email, password):     
 - **Requisição JSON:**
   {
     "name": "amos",
@@ -45,13 +45,15 @@
     "password": "1234",
   }
 
-## 6. Update User (UPDATE com Autenticação - token)
+## 6. Update User (PUT com Autenticação - token)
 
 - **Endpoint:** 
   - Localhost: `http://localhost:3030/user-update/{id}`
   - Produção: `https://list-users.cyclic.app/user-update/{id}`
 - **Exemplo:** `http://localhost:3030/user-update/1`
+-- passar as informações com json(name, email, password):
   {
+    "name":"name",
     "email": "bob@example.com",
     "password": "1234"
   }
@@ -69,6 +71,7 @@
   - Localhost: `http://localhost:3030/login`
   - Produção: `https://list-users.cyclic.applogin`
 - **Exemplo:** `http://localhost:3030/login`
+-- passar as informações com json(email, password):
   {
     "email": "bob@example.com",
     "password": "1234"
